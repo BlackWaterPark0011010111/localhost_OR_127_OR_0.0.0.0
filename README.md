@@ -20,7 +20,7 @@ Host file locations:
 "C:\Windows\System32\drivers\etc\hosts" - Windows
 "/private/etc/hosts" - macOS
 "/etc/hosts" - Linux
-   
+     
 If you enter these addresses in terminal, a window will pop up asking which application to open the file with. When you choose, you'll see all the information contained in this file and how the system uses it. For example, if we enter "localhost" in a browser's search bar, it automatically checks the hosts file to see if there's a defined IP address there. If nothing is found, it sends a request to the DNS server, then receives a DNS response. If there's an error - it's a resolution error, if successful - it returns the IP. So we can edit our hosts file, add custom names that will resolve to specific addresses - we're creating an alternative to localhost, or if we have a home server, we can set domain names that will resolve to our PC.
   
 About 0.0.0.0 - if we access our network directly and work with an application, the browser won't be able to open the link because any application we work with is only available within our network interface, loopback (localhost). To make the application available on other network interfaces so other users can connect to it, we change the server startup settings and specify 0.0.0.0 there. After refreshing, we'll see our application available again. When we run an application on all zeros (0.0.0.0), it becomes available on all network interfaces, meaning we can connect to our application from all external IP addresses. BUT! In this case we need to consider security settings.
